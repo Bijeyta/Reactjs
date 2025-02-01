@@ -1,0 +1,95 @@
+<!-- Code 1 - Here we had used HTML to render something in browser
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namaste React</title>
+</head>
+<script>
+
+</script>
+<body>
+  <div id="root"> 
+    <h1>Welcome React</h1>
+  </div>
+</body>
+</html> 
+
+  -->
+<!-- -------------------------------------------------------------------------------------------------------- -->
+
+<!-- Case 2 - Lets try to do case 1 through javascript -->
+<!-- How do we create H1 tag using javascript ? 
+    Ans: Through document.createElement("") -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+   Here I have created the H1 tag using javascript. Now we have to put this h1 tag inside div tage
+  <script>
+    const heading = document.createElement("h1");
+    heading.innerHTML = "Hello World from JavaScript"
+
+    // here we are getting the div 'root' element.
+    const root = document.getElementById("root");
+    // the heading will goes inside the root through appendChild.
+    root.appendChild(heading);
+
+  </script>
+</body>
+</html> -->
+
+<!-- -------------------------------------------------------------------------------------------------------- -->
+
+<!-- Case 3: How you can build the basic React Hello World Program from React 
+ 
+Q. How the browser will understand that what is the document or innerHTML createElement() or document.getElementById() or appendChild()
+
+A. These are the super powers that browser already know about it. These are not the javascript but these are something which browser alredy know about it. like console.log() and setTimeout function.
+
+Q. Get the react in our project.
+A. We can get this through CDN - CDN is Content Delivery Network, These are the websites where react has been hosted and we just have to pull their React contents into our application. OR Basically CDN is the place where React library is hosted.
+
+# Read about CDN, Why do we need CDN.
+      -->
+
+      <!-- Just by including these links now our project have React inside it and now the browser will understand what is react. Hence we have injected react in our project. This is the 1st way to inject react in our project. 
+   # If you will open this link, you will get to know that these are just a java script code. As also it has been said that React is a javascript library. so at the end all your cide has been converted to the javascript. hence React is a javascript.
+   #There are 2 files only why? Answer: 1st file is react.development.js, this is the core file of react. or the core file of react algorithm. The 2nd file is react library which is useful for dom operations. (Document object model). The 2nd file is different for the different platforms like for browser we have react-dom. for mobile phone applications we use React-Native. There is also something called React 3D. So, there are different places where react is used so, every one have different methods different algorithms. Hence we have 2 file. Also the 2nd file is working as bridge between react and the DOM (Document Object Model)
+   
+  -->
+
+  <!-- How how to create H1 tag using React ans is through React.createElement() this takes 3 arguments 1st is "tage name" i.e "h1" or "container" or "div" or "h2" the 2nd is {} (object) and the 3rd is "What we what to put or displat inside the tag. (Suppose indide the h1 tage we want to displat "Welcome in React World")"-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namaste React</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script>
+    // By this we can create the element or html tag.
+    const heading = React.createElement("h1", {}, "Welcome to React World")
+    // How we have to put this h1 tag inside the div tag that we have created in the body whose id is "root".
+    // by below code we can put our h1 element that we have created in React into DOM.
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(heading)
+  </script>
+
+  
+</body>
+
+</html>
