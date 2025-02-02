@@ -74,22 +74,22 @@ A. We can get this through CDN - CDN is Content Delivery Network, These are the 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Namaste React</title>
+  <link rel="stylesheet" href="./index.css"/>
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- If any tag inside Root DOM will be replace be react. means it will get render for few seconds but then they are immediately replaced by React. -->
+  </div>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script>
-    // By this we can create the element or html tag.
-    const heading = React.createElement("h1", {}, "Welcome to React World")
-    // How we have to put this h1 tag inside the div tag that we have created in the body whose id is "root".
-    // by below code we can put our h1 element that we have created in React into DOM.
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(heading)
-  </script>
+  <script src="./App.js"></script>
 
-  
+  <!-- The script order should be in sequence. -->
 </body>
 
 </html>
+
+<!-- We want to manipulate our DOM with javascript this was the main pheloshipy of React. React gives us super power way to manipulate The most costly operation or expense in web page, The most important hit is when the DOM nodes needs to be manipulated Suppose there is a web page and when you click the Button, somethings shown up in the page or something hides into the web page. Here in browser the DOM trees are getting changed this is the most costly things that something that putting some nodes inside the DOM and removing something from the DOM, these are the costly operations and all these costly operations, and all the frameworks and libries tries to optimized it. React also comes with the philosphy that whenever you are trying to do anything on the web page do it with javascript. -->
+
+<!-- React element is an object not html behind the scene it gets converted into object but actual its an html. -->
