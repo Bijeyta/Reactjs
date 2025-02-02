@@ -1,3 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+
 // By this we can create the element or html tag.
 // The object is the place where you give attributes to the tags.
 const parent = React.createElement("div", {id: "upperDiv"}, [React.createElement("h1", {id: "heading"}, "Welcome to React World"), React.createElement("h1", {id: "heading"}, "Welcome to React World")])
